@@ -19,7 +19,7 @@ accordionBtns.forEach((accordion) => {
     // Update aria-expanded state
     // Determine new state
     // const isOpen = this.classList.contains("is-open");
-    const isOpen = this.getAttribute("aria-expanded") === true;
+    const isOpen = this.getAttribute("aria-expanded") === "true";
     const newState = !isOpen;
 
     // this.setAttribute("aria-expanded", isOpen ? "true" : "false");
