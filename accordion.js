@@ -15,6 +15,10 @@ accordionBtns.forEach((accordion) => {
   accordion.onclick = function () {
     this.classList.toggle("is-open");
 
+    // Update aria-expanded state
+    const isOpen = this.classList.contains("is-open");
+    this.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
     let content = this.nextElementSibling;
     console.log(content);
 
