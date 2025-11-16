@@ -18,6 +18,8 @@ The original code was missing the ARIA relationships between each header and its
 
 ---
 
+[Simple Accordions](https://shap0011.github.io/CST8914-lab11/index.html)
+
 ## Reference:
 
 [Accordion Example](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/)
