@@ -13,34 +13,22 @@ const accordionBtns = document.querySelectorAll(".accordion");
 
 accordionBtns.forEach((accordion) => {
   accordion.onclick = function () {
-    //this.classList.toggle("is-open");
     let content = this.nextElementSibling;
 
     // Update aria-expanded state
     // Determine new state
-    // const isOpen = this.classList.contains("is-open");
     const isOpen = this.getAttribute("aria-expanded") === "true";
     const newState = !isOpen;
-
-    // this.setAttribute("aria-expanded", isOpen ? "true" : "false");
 
     // Update aria-expanded
     this.setAttribute("aria-expanded", newState ? "true" : "false");
 
-    // let content = this.nextElementSibling;
-    console.log(content);
-
     // Update content visibility using max-height
-    // if (content.style.maxHeight) {
     if (newState) {
       //this is if the accordion is open
-      // content.style.maxHeight = null;
       content.style.maxHeight = content.scrollHeight + "px";
-      console.log(content.style.maxHeight);
     } else {
-      //if the accordion is currently closed
-      // content.style.maxHeight = content.scrollHeight + "px";
-      // console.log(content.style.maxHeight);
+      // if the accordion is currently closed
       content.style.maxHeight = null;
     }
   };
